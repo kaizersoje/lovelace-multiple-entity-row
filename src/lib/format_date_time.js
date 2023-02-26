@@ -3,9 +3,9 @@
 import memoizeOne from 'memoize-one';
 import { useAmPm } from './use_am_pm';
 
-export const formatDateTime = (dateObj, locale) => formatDateTimeMem(locale).format(dateObj);
+export const formatDateTime = (dateObj, locale) => formatShortDateTimeMem(locale).format(dateObj);
 
-const formatDateTimeMem = memoizeOne(
+const formatShortDateTimeMem = memoizeOne(
     (locale) =>
         new Intl.DateTimeFormat(locale.language, {
             month: 'short',
