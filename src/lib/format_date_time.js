@@ -9,7 +9,7 @@ const formatDateTimeMem = memoizeOne(
     (locale) =>
         new Intl.DateTimeFormat(locale.language, {
             year: 'numeric',
-            month: 'long',
+            month: 'short',
             day: 'numeric',
             hour: useAmPm(locale) ? 'numeric' : '2-digit',
             minute: '2-digit',
