@@ -8,7 +8,6 @@ export const formatDateTime = (dateObj, locale) => formatDateTimeMem(locale).for
 const formatDateTimeMem = memoizeOne(
     (locale) =>
         new Intl.DateTimeFormat(locale.language, {
-            year: 'numeric',
             month: 'short',
             day: 'numeric',
             hour: useAmPm(locale) ? 'numeric' : '2-digit',
